@@ -212,9 +212,9 @@
                     </a>
                   </li>
                   <li class="dropdown-item py-2">
-                    <a href="javascript:;" class="text-body ms-0">
+                    <a href="{{ route('admin.change.password') }}" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="edit"></i>
-                      <span>Edit Profile</span>
+                      <span>Change Password</span>
                     </a>
                   </li>
                   <li class="dropdown-item py-2">
