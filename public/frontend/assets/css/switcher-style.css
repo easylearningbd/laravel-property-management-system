@@ -1,0 +1,168 @@
+
+
+/*=============== Color-Layout =============*/
+
+.switcher .switch_btn button {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  transition: all 500ms ease;
+}
+
+.switcher .switch_btn {
+  position: absolute;
+  right: -50px;
+  top: -10px;
+  z-index: -1;
+}
+
+.switcher {
+  position: fixed;
+  top: 450px;
+  z-index: 99;
+}
+
+.switcher .switch_menu {
+  position: absolute;
+  width:170px;
+  height: 30px;
+  background: transparent;
+  display: none;
+  top: -3px;
+  left: 60px;
+}
+
+.switcher #styleOptions li {
+  position: relative;
+  display: inline-block;
+  width:30px;
+  height:30px;
+  margin:0px;
+}
+
+.switcher #styleOptions li a {
+  position: relative;
+  display: inline-block;
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.switcher #styleOptions li a.green-color {
+  background: #2dbe6c;
+}
+
+.switcher #styleOptions li a.pink-color {
+  background: #ff6ec7;
+}
+
+.switcher #styleOptions li a.violet-color {
+  background: #6936d8;
+}
+
+.switcher #styleOptions li a.crimson-color {
+  background: #e62a4e;
+}
+
+.switcher #styleOptions li a.orange-color {
+  background: #FFA500;
+}
+
+
+/*=============== Boxed-Layout =============*/
+
+
+.body_switcher .body_switch_btn button {
+  width:50px;
+  height:50px;
+  line-height: 50px;
+  font-size: 24px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.body_switcher .body_switch_btn {
+  position: absolute;
+  right: -50px;
+  z-index: -1;
+}
+
+.body_switcher {
+  position: fixed;
+  top:500px;
+  z-index: 99;
+  left:-200px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.body_switcher .boxed_switch_menu {
+  width:200px;
+  background: #fff;
+  position: relative;
+  padding: 15px 15px 30px 15px;
+  text-align: center;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+.body_switcher .boxed_switch_menu h5{
+  position: relative;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.body_switcher.switcher-show{
+  left:0;
+}
+
+.body_switcher .boxed_switch_menu .switch_body .box {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.body_switcher .boxed_switch_menu .switch_body .box>div {
+  width:80px;
+  height:50px;
+  background: #fff;
+  border:2px solid #999;
+}
+
+.body_switcher .boxed_switch_menu .switch_body .box>div>span {
+  display: block;
+  width:60px;
+  height:100%;
+  margin:0 auto;
+  background: #fff;
+  border-left:2px solid #e5e5e5;
+  border-right:2px solid #e5e5e5;
+}
+
+.body_switcher .boxed_switch_menu .switch_body .box p{
+  position: relative;
+  display: block;
+  font-size: 16px;
+  color: #999;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.main_page.active_boxlayout {
+  max-width: 1550px;
+  width: 100%;
+  min-width: 300px;
+  margin: 0 auto;
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  background-position: center;
+  overflow-x:hidden;
+}
