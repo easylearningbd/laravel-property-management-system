@@ -74,7 +74,7 @@
 					 <input type="text" name="name" class="form-control" id="exampleInputUsername1" autocomplete="off" value="{{ $profileData->name }}">
 				</div>
 
-				<div class="mb-3">
+				<div class="mb-3"> 
  <label for="exampleInputEmail1" class="form-label">Email  </label>
 					 <input type="email" name="email" class="form-control" id="exampleInputUsername1" autocomplete="off" value="{{ $profileData->email }}">
 				</div>
