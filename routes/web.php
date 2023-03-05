@@ -37,7 +37,12 @@ Route::middleware('auth')->group(function () {
   Route::post('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
 
  Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout'); 
-    
+
+ Route::get('/user/change/password', [UserController::class, 'UserChangePassword'])->name('user.change.password'); 
+
+  Route::post('/user/password/update', [UserController::class, 'UserPasswordUpdate'])->name('user.password.update');
+
+
 });
 
 require __DIR__.'/auth.php';
