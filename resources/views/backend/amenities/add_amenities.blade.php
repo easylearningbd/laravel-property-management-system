@@ -17,16 +17,14 @@
 
 			<h6 class="card-title">Add Amenities   </h6>
 
-			<form method="POST" action="{{ route('store.type') }}" class="forms-sample">
+			<form id="myForm" method="POST" action="{{ route('store.type') }}" class="forms-sample">
 				@csrf
  
 
-				<div class="mb-3">
+				<div class="form-group mb-3">
  <label for="exampleInputEmail1" class="form-label">Amenities Name   </label>
-					 <input type="text" name="amenitis_name" class="form-control @error('amenitis_name') is-invalid @enderror " >
-           @error('amenitis_name')
-           <span class="text-danger">{{ $message }}</span>
-           @enderror
+					 <input type="text" name="amenitis_name" class="form-control" >
+           
 				</div>
 
 			 
@@ -52,5 +50,38 @@
 			</div>
  
 
+
+<script type="text/javascript">
+    $(document).ready(function (){
+        $('#myForm').validate({
+            rules: {
+                amenitis_name: {
+                    required : true,
+                },
+
+                
+            },
+            messages :{
+                amenitis_name: {
+                    required : 'Please Enter Amenities Name',
+                }, 
+                 
+
+            },
+            errorElement : 'span', 
+            errorPlacement: function (error,element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight : function(element, errorClass, validClass){
+                $(element).addClass('is-invalid');
+            },
+            unhighlight : function(element, errorClass, validClass){
+                $(element).removeClass('is-invalid');
+            },
+        });
+    });
+    
+</script>
 
 @endsection
