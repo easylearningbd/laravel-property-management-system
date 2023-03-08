@@ -7,7 +7,7 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\PropertyTypeController;
  
-/*  
+/*   
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
