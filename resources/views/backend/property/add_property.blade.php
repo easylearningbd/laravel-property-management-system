@@ -193,19 +193,35 @@
         <div class="col-sm-4">
             <div class="mb-3">
                 <label class="form-label">Property Type </label>
-                <input type="text" name="property_size"  class="form-control" >
+                <select name="ptype_id" class="form-select" id="exampleFormControlSelect1">
+                <option selected="" disabled="">Select Type</option>
+               @foreach($propertytype as $ptype)
+                <option value="{{ $ptype->id }}">{{ $ptype->type_name }}</option>
+               @endforeach
+            </select>
             </div>
         </div><!-- Col -->
         <div class="col-sm-4">
             <div class="mb-3">
                 <label class="form-label">Property Amenities </label>
-                <input type="text" name="property_video"  class="form-control" >
+     <select name="amenities_id[]" class="js-example-basic-multiple form-select" multiple="multiple" data-width="100%">
+
+                 @foreach($amenities as $ameni)
+                <option value="{{ $ameni->id }}">{{ $ameni->amenitis_name }}</option>
+               @endforeach
+                
+            </select>
             </div>
         </div><!-- Col -->
         <div class="col-sm-4">
             <div class="mb-3">
                 <label class="form-label"> Agent </label>
-                 <input type="text" name="neighborhood"  class="form-control" >
+                 <select name="agent_id" class="form-select" id="exampleFormControlSelect1">
+                <option selected="" disabled="">Select Agent</option>
+               @foreach($activeAgent as $agent)
+                <option value="{{ $agent->id }}">{{ $agent->name }}</option>
+               @endforeach
+            </select>
             </div>
         </div><!-- Col -->
  
