@@ -85,39 +85,137 @@
 
 
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
+            <div class="mb-3">
+                <label class="form-label">BedRooms</label>
+                <input type="text" name="bedrooms"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+        <div class="col-sm-3">
+            <div class="mb-3">
+                <label class="form-label">Bathrooms</label>
+                <input type="text" name="bathrooms"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+        <div class="col-sm-3">
+            <div class="mb-3">
+                <label class="form-label">Garage</label>
+                 <input type="text" name="garage"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+
+          <div class="col-sm-3">
+            <div class="mb-3">
+                <label class="form-label">Garage Size</label>
+                 <input type="text" name="garage_size"  class="form-control" >
+            </div>
+        </div><!-- Col --> 
+
+    </div><!-- Row -->
+
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="mb-3">
+                <label class="form-label">Address</label>
+                <input type="text" name="address"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+        <div class="col-sm-3">
             <div class="mb-3">
                 <label class="form-label">City</label>
-                <input type="text" class="form-control" placeholder="Enter city">
+                <input type="text" name="city"  class="form-control" >
             </div>
         </div><!-- Col -->
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <div class="mb-3">
                 <label class="form-label">State</label>
-                <input type="text" class="form-control" placeholder="Enter state">
+                 <input type="text" name="state"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+
+          <div class="col-sm-3">
+            <div class="mb-3">
+                <label class="form-label">Postal Code </label>
+                 <input type="text" name="postal_code"  class="form-control" >
+            </div>
+        </div><!-- Col --> 
+
+    </div><!-- Row -->
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="form-label">Property Size</label>
+                <input type="text" name="property_size"  class="form-control" >
             </div>
         </div><!-- Col -->
         <div class="col-sm-4">
             <div class="mb-3">
-                <label class="form-label">Zip</label>
-                <input type="text" class="form-control" placeholder="Enter zip code">
+                <label class="form-label">Property Video</label>
+                <input type="text" name="property_video"  class="form-control" >
             </div>
         </div><!-- Col -->
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="form-label">Neighborhood</label>
+                 <input type="text" name="neighborhood"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+ 
+
     </div><!-- Row -->
+
+
+
+
     <div class="row">
         <div class="col-sm-6">
             <div class="mb-3">
-                <label class="form-label">Email address</label>
-                <input type="email" class="form-control" placeholder="Enter email">
+                <label class="form-label">Latitude</label>
+                <input type="text" name="latitude" class="form-control" >
+                <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">Go here to get Latitude from address</a>
             </div>
         </div><!-- Col -->
         <div class="col-sm-6">
             <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" class="form-control" autocomplete="off" placeholder="Password">
+                <label class="form-label">Longitude</label>
+                <input type="text" name="longitude" class="form-control" >
+                 <a href="https://www.latlong.net/convert-address-to-lat-long.html" target="_blank">Go here to get Longitude from address</a>
             </div>
         </div><!-- Col -->
     </div><!-- Row -->
+
+
+
+        <div class="row">
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="form-label">Property Type </label>
+                <input type="text" name="property_size"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="form-label">Property Amenities </label>
+                <input type="text" name="property_video"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+        <div class="col-sm-4">
+            <div class="mb-3">
+                <label class="form-label"> Agent </label>
+                 <input type="text" name="neighborhood"  class="form-control" >
+            </div>
+        </div><!-- Col -->
+ 
+
+    </div><!-- Row -->
+
+
+
+
+
             </form>
       <button type="button" class="btn btn-primary submit">Submit form</button>
     </div>
