@@ -119,6 +119,7 @@ Route::controller(PropertyController::class)->group(function(){
      Route::get('/add/property', 'AddProperty')->name('add.property');
      Route::post('/store/property', 'StoreProperty')->name('store.property');
      Route::get('/edit/property/{id}', 'EditProperty')->name('edit.property');
+     Route::post('/update/property', 'UpdateProperty')->name('update.property');
     
 
 });
