@@ -98,13 +98,36 @@ class PropertyController extends Controller
 
             'property_id' => $property_id,
             'photo_name' => $uploadPath,
-            'property_id' => Carbon::now(), 
+            'created_at' => Carbon::now(), 
 
         ]); 
         } // End Foreach
 
          /// End Multiple Image Upload From Here ////
 
+         /// Facilities Add From Here ////
+
+        $facilities = Count($request->facility_name);
+
+        if ($facilities != NULL) {
+           for ($i=0; $i < $facilities; $i++) { 
+               $fcount = new Facility();
+               $fcount->property_id = $property_id;
+               $fcount->facility_name = $request->facility_name[$i];
+               $fcount->distance = $request->distance[$i];
+               $fcount->save();
+           }
+        }
+
+         /// End Facilities  ////
+
+
+            $notification = array(
+            'message' => 'Property Inserted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.property')->with($notification);
  
     }// End Method 
 
