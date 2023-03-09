@@ -50,7 +50,7 @@
 
                         </td> 
                         <td>
-       <a href="{{ route('edit.amenitie',$item->id) }}" class="btn btn-inverse-warning"> Edit </a>
+       <a href="{{ route('edit.property',$item->id) }}" class="btn btn-inverse-warning"> Edit </a>
        <a href="{{ route('delete.amenitie',$item->id) }}" class="btn btn-inverse-danger" id="delete"> Delete  </a>
                         </td> 
                       </tr>
