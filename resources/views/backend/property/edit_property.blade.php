@@ -341,7 +341,7 @@
         <h6 class="card-title">Edit Multi Image  </h6>
             
 
-    <form method="post" action="{{ route('update.property.thambnail') }}" id="myForm" enctype="multipart/form-data">
+    <form method="post" action="{{ route('update.property.multiimage') }}" id="myForm" enctype="multipart/form-data">
                 @csrf
 
 
@@ -367,7 +367,7 @@
             </td> 
            
             <td> 
-            <input type="file" class="form-group" name="multi_img">
+            <input type="file" class="form-control" name="multi_img[{{ $img->id }}]">
             </td>
             <td>
     <input type="submit" class="btn btn-primary px-4" value="Update Image" >
@@ -380,13 +380,7 @@
     </tbody>
 </table>
 </div>
-
-
-      
-<br><br>
-  <button type="submit" class="btn btn-primary">Save Changes </button>
-
-
+ 
             </form> 
         </div>
           </div>
