@@ -131,6 +131,8 @@ Route::controller(PropertyController::class)->group(function(){
 
      Route::post('/update/property/facilities', 'UpdatePropertyFacilities')->name('update.property.facilities');
 
+     Route::get('/delete/property/{id}', 'DeleteProperty')->name('delete.property');
+
 });
 
 
