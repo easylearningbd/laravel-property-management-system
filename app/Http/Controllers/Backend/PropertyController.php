@@ -203,6 +203,38 @@ class PropertyController extends Controller
 
 
 
+    public function UpdatePropertyThambnail(Request $request){
+
+        $pro_id = $request->id;
+        $oldImage = $request->old_img;
+
+        $image = $request->file('property_thambnail');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(370,250)->save('upload/property/thambnail/'.$name_gen);
+        $save_url = 'upload/property/thambnail/'.$name_gen;
+
+        if (file_exists($oldImage)) {
+            unlink($oldImage);
+        }
+
+        Property::findOrFail($pro_id)->update([
+
+            'property_thambnail' => $save_url,
+            'updated_at' => Carbon::now(), 
+        ]);
+
+         $notification = array(
+            'message' => 'Property Image Thambnail Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
+
+    }// End Method 
+
+
+
+
 
 
 
