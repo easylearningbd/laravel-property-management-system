@@ -9,20 +9,82 @@
             <div class="card">
               <div class="card-body">
                                 <h6 class="card-title">Property Details </h6>
-                                <p class="text-muted mb-3">Add class <code>.table</code></p>
+                                
                                 <div class="table-responsive">
         <table class="table table-striped">
             
             <tbody>
                 <tr> 
                     <td>Property Name </td>
-                    <td>{{ $property->property_name }}</td> 
+                    <td><code>{{ $property->property_name }}</code></td> 
                 </tr>
 
                 <tr> 
                     <td>Property Status </td>
-                    <td>{{ $property->property_status }}</td> 
+                    <td><code>{{ $property->property_status }}</code></td> 
                 </tr>
+                <tr> 
+                    <td>Lowest Price </td>
+                    <td><code>{{ $property->lowest_price }}</code></td> 
+                </tr>
+
+                <tr> 
+                    <td>Max Price </td>
+                    <td><code>{{ $property->max_price }}</code></td> 
+                </tr>
+                <tr> 
+                    <td>BedRooms </td>
+                    <td><code>{{ $property->bedrooms }}</code></td> 
+                </tr>
+                 
+                <tr> 
+                    <td>Bathrooms </td>
+                    <td><code>{{ $property->bathrooms }}</code></td> 
+                </tr>
+                <tr> 
+                    <td>Garage </td>
+                    <td><code>{{ $property->garage }}</code></td> 
+                </tr>
+                <tr> 
+                    <td>Garage Size </td>
+                    <td><code>{{ $property->garage_size }}</code></td> 
+                </tr>
+                <tr> 
+                    <td>Address </td>
+                    <td><code>{{ $property->address }}</code></td> 
+                </tr>
+                <tr> 
+                    <td>City </td>
+                    <td><code>{{ $property->city }}</code></td> 
+                </tr>
+                <tr> 
+                    <td>State </td>
+                    <td><code>{{ $property->state }}</code></td> 
+                </tr>
+
+                 <tr> 
+                    <td>Postal Code </td>
+                    <td><code>{{ $property->postal_code }}</code></td> 
+                </tr>
+
+                 <tr> 
+                    <td>Main Image </td>
+                    <td>
+                    <img src="{{ asset($property->property_thambnail) }}" style="width:100px; height:70px;">
+                    </td> 
+                </tr>
+
+                 <tr> 
+                    <td>Status </td>
+                    <td>   
+                        @if($property->status == 1)
+                <span class="badge rounded-pill bg-success">Active</span>
+                      @else
+               <span class="badge rounded-pill bg-danger">InActive</span>
+                      @endif
+                  </td> 
+                </tr>
+
                 
             </tbody>
         </table>
@@ -33,52 +95,79 @@
                     <div class="col-md-6 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                                <h6 class="card-title">Hoverable Table</h6>
-                                <p class="text-muted mb-3">Add class <code>.table-hover</code></p>
-                                <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>First Name</th>
-                                                    <th>LAST NAME</th>
-                                                    <th>USERNAME</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th>1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>3</th>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>4</th>
-                                                    <td>Larry</td>
-                                                    <td>Jellybean</td>
-                                                    <td>@lajelly</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>5</th>
-                                                    <td>Larry</td>
-                                                    <td>Kikat</td>
-                                                    <td>@lakitkat</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                </div>
+                                 
+                                
+<div class="table-responsive">
+        <table class="table table-striped">
+             
+            <tbody>
+                 <tr> 
+                    <td>Property Code </td>
+                    <td><code>{{ $property->property_code }}</code></td> 
+                </tr>
+
+                <tr> 
+                    <td>Property Size </td>
+                    <td><code>{{ $property->property_size }}</code></td> 
+                </tr>
+
+
+                <tr> 
+                    <td>Property Video</td>
+                    <td><code>{{ $property->property_video }}</code></td> 
+                </tr>
+
+                <tr> 
+                    <td>Neighborhood </td>
+                    <td><code>{{ $property->neighborhood }}</code></td> 
+                </tr>
+
+                 <tr> 
+                    <td>Latitude </td>
+                    <td><code>{{ $property->latitude }}</code></td> 
+                </tr>
+
+
+                 <tr> 
+                    <td>Longitude </td>
+                    <td><code>{{ $property->longitude }}</code></td> 
+                </tr>
+
+
+                 <tr> 
+                    <td>Property Type </td>
+                    <td><code>{{ $property['type']['type_name'] }}</code></td> 
+                </tr>
+
+                 <tr> 
+                    <td>Property Amenities </td>
+                    <td>
+ <select name="amenities_id[]" class="js-example-basic-multiple form-select" multiple="multiple" data-width="100%">
+
+                 @foreach($amenities as $ameni)
+                <option value="{{ $ameni->id }}" {{ (in_array($ameni->id,$property_ami)) ? 'selected' : '' }} >{{ $ameni->amenitis_name }}</option>
+               @endforeach
+                
+            </select>
+                    </td> 
+                </tr>
+
+
+                  <tr> 
+                    <td>Agent </td>
+                    <td>
+            @if($property->agent_id == NULL)
+            <td><code> Admin </code></td>
+            @else
+            <td><code> {{ $property['user']['name'] }} </code></td>
+            @endif
+                    </td> 
+                </tr>
+ 
+
+            </tbody>
+        </table>
+</div>
               </div>
             </div>
                     </div>
