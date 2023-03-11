@@ -133,6 +133,8 @@ Route::controller(PropertyController::class)->group(function(){
 
      Route::get('/delete/property/{id}', 'DeleteProperty')->name('delete.property');
 
+     Route::get('/details/property/{id}', 'DetailsProperty')->name('details.property');
+
 });
 
 
