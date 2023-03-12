@@ -103,6 +103,52 @@ public function AgentProfileStore(Request $request){
      }// End Method 
 
 
+ public function AgentChangePassword(){
+
+        $id = Auth::user()->id;
+        $profileData = User::find($id);
+        return view('agent.agent_change_password',compact('profileData'));
+
+     }// End Method 
+
+
+       public function AgentUpdatePassword(Request $request){
+
+        // Validation 
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required|confirmed'
+
+        ]);
+
+        /// Match The Old Password
+
+        if (!Hash::check($request->old_password, auth::user()->password)) {
+          
+           $notification = array(
+            'message' => 'Old Password Does not Match!',
+            'alert-type' => 'error'
+        );
+
+        return back()->with($notification);
+        }
+
+        /// Update The New Password 
+
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+
+        ]);
+
+         $notification = array(
+            'message' => 'Password Change Successfully',
+            'alert-type' => 'success'
+        );
+
+        return back()->with($notification); 
+
+     }// End Method 
+
 
 
 }
