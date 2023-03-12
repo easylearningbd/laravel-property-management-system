@@ -65,29 +65,32 @@
             <div class="inner-box">
                 <h4>Agent Register </h4>
                
-                <form action="{{ route('register') }}" method="post" class="default-form">
+                <form action="{{ route('agent.register') }}" method="post" class="default-form">
                     @csrf
 
 
                     <div class="form-group">
 
-                        <label>User name</label>
+                        <label>Agent Company Name</label>
                         <input type="text" name="name" id="name" required="">
                     </div>
                     <div class="form-group">
                         <label>Email address</label>
                         <input type="email" name="email" id="email" required="">
                     </div>
+
+                     <div class="form-group">
+                        <label>Agent Phone </label>
+                        <input type="text" name="phone" id="phone" required="">
+                    </div>
+
+
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" name="password" id="password" required="">
                     </div>
 
-                     <div class="form-group">
-                        <label>Confirm Password</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation" required="">
-                    </div>
-
+                     
                     <div class="form-group message-btn">
                         <button type="submit" class="theme-btn btn-one">Register</button>
                     </div>

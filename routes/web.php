@@ -81,6 +81,10 @@ Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name
 
 Route::get('/agent/login', [AgentController::class, 'AgentLogin'])->name('agent.login')->middleware(RedirectIfAuthenticated::class); 
 
+Route::post('/agent/register', [AgentController::class, 'AgentRegister'])->name('agent.register'); 
+
+
+
 
  Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login')->middleware(RedirectIfAuthenticated::class); 
 
