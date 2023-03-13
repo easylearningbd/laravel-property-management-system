@@ -165,6 +165,50 @@ public function AdminLogout(Request $request){
   }// End Method 
 
 
+  public function EditAgent($id){
+
+    $allagent = User::findOrFail($id);
+    return view('backend.agentuser.edit_agent',compact('allagent'));
+
+  }// End Method 
+
+
+  public function UpdateAgent(Request $request){
+
+    $user_id = $request->id;
+
+    User::findOrFail($user_id)->update([
+        'name' => $request->name,
+        'email' => $request->email,
+        'phone' => $request->phone,
+        'address' => $request->address, 
+    ]);
+
+
+       $notification = array(
+            'message' => 'Agent Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.agent')->with($notification);  
+
+  }// End Method 
+
+
+  public function DeleteAgent($id){
+
+    User::findOrFail($id)->delete();
+
+     $notification = array(
+            'message' => 'Agent Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
+
+  }// End Method 
+
+
 
 }
  
