@@ -172,6 +172,7 @@ Route::controller(AdminController::class)->group(function(){
      Route::post('/update/agent', 'UpdateAgent')->name('update.agent');
      Route::get('/delete/agent/{id}', 'DeleteAgent')->name('delete.agent'); 
    
+     Route::get('/changeStatus', 'changeStatus');
 
 });
 
