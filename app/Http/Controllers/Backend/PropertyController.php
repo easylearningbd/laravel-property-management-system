@@ -8,7 +8,7 @@ use App\Models\Property;
 use App\Models\MultiImage;
 use App\Models\Facility;
 use App\Models\Amenities;
-use App\Models\PropertyType;
+use App\Models\PropertyType; 
 use App\Models\User;
 use Intervention\Image\Facades\Image;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
