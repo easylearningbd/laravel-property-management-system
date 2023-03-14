@@ -212,6 +212,10 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
       Route::post('/agent/update/property/facilities', 'AgentUpdatePropertyFacilities')->name('agent.update.property.facilities');
 
+      Route::get('/agent/details/property/{id}', 'AgentDetailsProperty')->name('agent.details.property'); 
+
+      Route::get('/agent/delete/property/{id}', 'AgentDeleteProperty')->name('agent.delete.property'); 
+
   
 
 });
