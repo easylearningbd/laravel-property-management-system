@@ -281,6 +281,60 @@ public function AgentUpdatePropertyThambnail(Request $request){
     }// End Method 
 
 
+    public function AgentStoreNewMultiimage(Request $request){
+
+        $new_multi = $request->imageid;
+        $image = $request->file('multi_img');
+
+     $make_name = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+    Image::make($image)->resize(770,520)->save('upload/property/multi-image/'.$make_name);
+        $uploadPath = 'upload/property/multi-image/'.$make_name;
+
+        MultiImage::insert([
+            'property_id' => $new_multi,
+            'photo_name' => $uploadPath,
+            'created_at' => Carbon::now(), 
+        ]);
+
+    $notification = array(
+            'message' => 'Property Multi Image Added Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
+    }// End Method 
+
+
+    public function AgentUpdatePropertyFacilities(Request $request){
+
+        $pid = $request->id;
+
+        if ($request->facility_name == NULL) {
+           return redirect()->back();
+        }else{
+            Facility::where('property_id',$pid)->delete();
+
+          $facilities = Count($request->facility_name); 
+      
+           for ($i=0; $i < $facilities; $i++) { 
+               $fcount = new Facility();
+               $fcount->property_id = $pid;
+               $fcount->facility_name = $request->facility_name[$i];
+               $fcount->distance = $request->distance[$i];
+               $fcount->save();
+           } // end for 
+        }
+
+         $notification = array(
+            'message' => 'Property Facility Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
+
+    }// End Method 
+
+
 
 
 } 
