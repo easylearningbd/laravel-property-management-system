@@ -89,7 +89,7 @@
                             
                           </table>
                           <div class="d-grid">
-   <a href="" class="btn btn-primary mt-4">Start Now  </a> 
+   <a href="{{ route('buy.professional.plan') }}" class="btn btn-primary mt-4">Start Now  </a> 
                           </div>
                         </div>
                       </div>
