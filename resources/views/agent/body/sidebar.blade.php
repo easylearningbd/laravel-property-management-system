@@ -53,9 +53,9 @@ $status = $agentId->status;
           </li>
           
           <li class="nav-item">
-            <a href="pages/apps/calendar.html" class="nav-link">
+            <a href="{{ route('buy.package') }}" class="nav-link">
               <i class="link-icon" data-feather="calendar"></i>
-              <span class="link-title">Calendar</span>
+              <span class="link-title">Buy Package </span>
             </a>
           </li>
 

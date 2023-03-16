@@ -14,7 +14,7 @@ use Intervention\Image\Facades\Image;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
-
+ 
 class AgentPropertyController extends Controller
 {
     public function AgentAllProperty(){
@@ -385,7 +385,10 @@ public function AgentUpdatePropertyThambnail(Request $request){
     }// End Method  
 
 
+    public function BuyPackage(){
 
+        return view('agent.package.buy_package');
+    }// End Method  
 
 
 } 
