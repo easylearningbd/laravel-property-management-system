@@ -42,7 +42,7 @@
                         <td>{{ $item->package_amount }}</td> 
                         <td>{{ $item->created_at->format('l d M Y') }}</td> 
                         <td> 
-       <a href="{{ route('agent.package.invoice',$item->id) }}" class="btn btn-inverse-warning" title="Download"> <i data-feather="download"></i> </a> 
+       <a href="{{ route('package.invoice',$item->id) }}" class="btn btn-inverse-warning" title="Download"> <i data-feather="download"></i> </a> 
       
                         </td> 
                       </tr>
