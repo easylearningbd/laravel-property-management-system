@@ -232,6 +232,7 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
 
       Route::get('/package/history', 'PackageHistory')->name('package.history');
+      Route::get('/agent/package/invoice/{id}', 'AgentPackageInvoice')->name('agent.package.invoice');
      
 
 });
