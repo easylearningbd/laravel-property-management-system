@@ -229,6 +229,9 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
      Route::get('/buy/professional/plan', 'BuyProfessionalPlan')->name('buy.professional.plan');
       Route::post('/store/professional/plan', 'StoreProfessionalPlan')->name('store.professional.plan');
+
+
+      Route::get('/package/history', 'PackageHistory')->name('package.history');
      
 
 });
