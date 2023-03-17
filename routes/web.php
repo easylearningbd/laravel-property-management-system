@@ -160,6 +160,8 @@ Route::controller(PropertyController::class)->group(function(){
 
       Route::post('/active/property', 'ActiveProperty')->name('active.property');
 
+       Route::get('/admin/package/history', 'AdminPackageHistory')->name('admin.package.history');
+
 });
 
 

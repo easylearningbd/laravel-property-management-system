@@ -13,6 +13,8 @@ use App\Models\User;
 use Intervention\Image\Facades\Image;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Carbon\Carbon;
+use App\Models\PackagePlan;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class PropertyController extends Controller
 {
@@ -432,6 +434,13 @@ class PropertyController extends Controller
 
     }// End Method 
 
+    public function AdminPackageHistory(){
+
+     $packagehistory = PackagePlan::latest()->get();
+     return view('backend.package.package_history',compact('packagehistory'));
+
+
+    }// End Method 
 
 
 } 
