@@ -24,8 +24,9 @@ class IndexController extends Controller
 
 
         $multiImage = MultiImage::where('property_id',$id)->get();
+        $facility = Facility::where('property_id',$id)->get();
 
-        return view('frontend.property.property_details',compact('property','multiImage','property_amen'));
+        return view('frontend.property.property_details',compact('property','multiImage','property_amen','facility'));
 
     }// End Method 
 }
