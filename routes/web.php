@@ -10,7 +10,7 @@ use App\Http\Controllers\Backend\PropertyController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 
 use App\Http\Controllers\Agent\AgentPropertyController;
-  
+   
 /*   
 |--------------------------------------------------------------------------
 | Web Routes
