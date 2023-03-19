@@ -84,107 +84,47 @@
                                     <h4>Property Description</h4>
                                 </div>
                                 <div class="text">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed eiusm tempor incididunt labore dolore magna aliqua enim minim veniam quis nostrud exercitation laboris nisi ut aliquip ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur occaecat</p>
-                                    <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim  est laborum. Sed perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium totam rem aperiam.</p>
+                                    <p>{!! $property->long_descp !!}</p>
                                 </div>
                             </div>
                             <div class="details-box content-widget">
                                 <div class="title-box">
                                     <h4>Property Details</h4>
                                 </div>
-                                <ul class="list clearfix">
-                                    <li>Property ID: <span>ZOP251C</span></li>
-                                    <li>Rooms: <span>06</span></li>
-                                    <li>Garage Size: <span>200 Sq Ft</span></li>
-                                    <li>Property Price: <span>$30,000</span></li>
-                                    <li>Bedrooms: <span>04</span></li>
-                                    <li>Year Built: <span>01 April, 2019</span></li>
-                                    <li>Property Type: <span>Apertment</span></li>
-                                    <li>Bathrooms: <span>03</span></li>
-                                    <li>Property Status: <span>For Sale</span></li>
-                                    <li>Property Size: <span>2024 Sq Ft</span></li>
-                                    <li>Garage: <span>01</span></li>
-                                </ul>
+    <ul class="list clearfix">
+        <li>Property ID: <span>{{ $property->property_code }}</span></li>
+        <li>Rooms: <span>{{ $property->bedrooms }}</span></li>
+        <li>Garage Size: <span>{{ $property->garage_size }} Sq Ft</span></li>  
+        
+        <li>Property Type: <span>{{ $property->type->type_name }}</span></li>
+        <li>Bathrooms: <span>{{ $property->bathrooms }}</span></li>
+        <li>Property Status: <span>For {{ $property->property_status }}</span></li>
+        <li>Property Size: <span>{{ $property->property_size }} Sq Ft</span></li>
+        <li>Garage: <span>{{ $property->garage }}</span></li>
+    </ul>
                             </div>
                             <div class="amenities-box content-widget">
                                 <div class="title-box">
                                     <h4>Amenities</h4>
                                 </div>
                                 <ul class="list clearfix">
-                                    <li>Air Conditioning</li>
-                                    <li>Cleaning Service</li>
-                                    <li>Dishwasher</li>
-                                    <li>Hardwood Flows</li>
-                                    <li>Swimming Pool</li>
-                                    <li>Outdoor Shower</li>
-                                    <li>Microwave</li>
-                                    <li>Pet Friendly</li>
-                                    <li>Basketball Court</li>
-                                    <li>Refrigerator</li>
-                                    <li>Gym</li>
+                                	@foreach($property_amen as $amen)
+                                    <li>{{ $amen }}</li>
+                                    @endforeach
                                 </ul>
                             </div>
-                            <div class="floorplan-inner content-widget">
-                                <div class="title-box">
-                                    <h4>Floor Plan</h4>
-                                </div>
-                                <ul class="accordion-box">
-                                    <li class="accordion block active-block">
-                                        <div class="acc-btn active">
-                                            <div class="icon-outer"><i class="fas fa-angle-down"></i></div>
-                                            <h5>First Floor</h5>
-                                        </div>
-                                        <div class="acc-content current">
-                                            <div class="content-box">
-                                                <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim  est laborum. Sed perspiciatis unde omnis iste natus error sit voluptatem accusa dolore mque laudant.</p>
-                                                <figure class="image-box">
-                                                    <img src="assets/images/resource/floor-1.png" alt="">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="accordion block">
-                                        <div class="acc-btn">
-                                            <div class="icon-outer"><i class="fas fa-angle-down"></i></div>
-                                            <h5>Second Floor</h5>
-                                        </div>
-                                        <div class="acc-content">
-                                            <div class="content-box">
-                                                <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim  est laborum. Sed perspiciatis unde omnis iste natus error sit voluptatem accusa dolore mque laudant.</p>
-                                                <figure class="image-box">
-                                                    <img src="assets/images/resource/floor-1.png" alt="">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="accordion block">
-                                         <div class="acc-btn">
-                                            <div class="icon-outer"><i class="fas fa-angle-down"></i></div>
-                                            <h5>Third Floor</h5>
-                                        </div>
-                                        <div class="acc-content">
-                                            <div class="content-box">
-                                                <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim  est laborum. Sed perspiciatis unde omnis iste natus error sit voluptatem accusa dolore mque laudant.</p>
-                                                <figure class="image-box">
-                                                    <img src="assets/images/resource/floor-1.png" alt="">
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                             <div class="location-box content-widget">
                                 <div class="title-box">
                                     <h4>Location</h4>
                                 </div>
-                                <ul class="info clearfix">
-                                    <li><span>Address:</span> Virginia temple hills</li>
-                                    <li><span>Country:</span> United State</li>
-                                    <li><span>State/county:</span> California</li>
-                                    <li><span>Neighborhood:</span> Andersonville</li>
-                                    <li><span>Zip/Postal Code:</span> 2403</li>
-                                    <li><span>City:</span> Brooklyn</li>
-                                </ul>
+<ul class="info clearfix">
+    <li><span>Address:</span> {{ $property->address }}</li> 
+    <li><span>State/county:</span> {{ $property->state }}</li>
+    <li><span>Neighborhood:</span> {{ $property->neighborhood }}</li>
+    <li><span>Zip/Postal Code:</span> {{ $property->postal_code }}</li>
+    <li><span>City:</span> {{ $property->city }}</li>
+</ul>
                                 <div class="google-map-area">
                                     <div 
                                         class="google-map" 
