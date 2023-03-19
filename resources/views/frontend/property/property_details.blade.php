@@ -233,21 +233,44 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
-                        <div class="property-sidebar default-sidebar">
-                            <div class="author-widget sidebar-widget">
-                                <div class="author-box">
-                                    <figure class="author-thumb"><img src="assets/images/resource/author-1.jpg" alt=""></figure>
-                                    <div class="inner">
-                                        <h4>Michael Bean</h4>
-                                        <ul class="info clearfix">
-                                            <li><i class="fas fa-map-marker-alt"></i>84 St. John Wood High Street, 
-                                            St Johns Wood</li>
-                                            <li><i class="fas fa-phone"></i><a href="tel:03030571965">030 3057 1965</a></li>
-                                        </ul>
-                                        <div class="btn-box"><a href="agents-details.html">View Listing</a></div>
-                                    </div>
-                                </div>
+    <div class="property-sidebar default-sidebar">
+        <div class="author-widget sidebar-widget">
+            <div class="author-box">
+
+             @if($property->agent_id == Null)
+
+              <figure class="author-thumb"><img src="{{ url('upload/ariyan.jpg') }}" alt=""></figure>
+                <div class="inner">
+                    <h4>Admin </h4>
+                    <ul class="info clearfix">
+                        <li><i class="fas fa-map-marker-alt"></i>84 St. John Wood High Street, 
+                        St Johns Wood</li>
+                        <li><i class="fas fa-phone"></i><a href="tel:03030571965">030 3057 1965</a></li>
+                    </ul>
+                    <div class="btn-box"><a href="agents-details.html">View Listing</a></div>
+                </div>
+
+             @else
+
+              <figure class="author-thumb"><img src="{{ (!empty($property->user->photo)) ? url('upload/agent_images/'.$property->user->photo) : url('upload/no_image.jpg') }}" alt=""></figure>
+                <div class="inner">
+                    <h4>{{ $property->user->name }}</h4>
+                    <ul class="info clearfix">
+                        <li><i class="fas fa-map-marker-alt"></i>{{ $property->user->address }}</li>
+                        <li><i class="fas fa-phone"></i><a href="tel:03030571965">{{ $property->user->phone }}</a></li>
+                    </ul>
+                    <div class="btn-box"><a href="agents-details.html">View Listing</a></div>
+                </div>
+
+             @endif 
+
+            </div>
+                               
+
+
                                 <div class="form-inner">
                                     <form action="property-details.html" method="post" class="default-form">
                                         <div class="form-group">
