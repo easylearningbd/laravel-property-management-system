@@ -22,7 +22,6 @@ class IndexController extends Controller
         $property_amen = explode(',',$amenities);
 
 
-
         $multiImage = MultiImage::where('property_id',$id)->get();
         $facility = Facility::where('property_id',$id)->get();
 
