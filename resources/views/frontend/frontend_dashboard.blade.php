@@ -180,6 +180,26 @@
 
 </script>
 
+<!-- // start load Wishlist Data  -->
+
+<script type="text/javascript">
+
+    function wishlist(){
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            url: "/get-wishlist-property/"
+
+            success:function(response){
+
+                $('#wishQty').text(response.wishQty);
+
+            }
+        })
+    }
+    
+</script>
+
 
 </body><!-- End of .page_wrapper -->
 </html>
