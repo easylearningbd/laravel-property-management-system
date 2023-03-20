@@ -26,11 +26,10 @@
 
 
 
-  @php
+          @php
 
             $id = Auth::user()->id;
-            $userData = App\Models\User::find($id);
-
+            $userData = App\Models\User::find($id); 
         @endphp
 
 
