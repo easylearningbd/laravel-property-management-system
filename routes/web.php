@@ -55,7 +55,8 @@ Route::middleware('auth')->group(function () {
 Route::controller(WishlistController::class)->group(function(){
 
      Route::get('/user/wishlist', 'UserWishlist')->name('user.wishlist');
-     Route::get('/get-wishlist-property', 'GetWishlistProperty'); 
+     Route::get('/get-wishlist-property', 'GetWishlistProperty');
+      Route::get('/wishlist-remove/{id}', 'WishlistRemove');  
       
 
 });
