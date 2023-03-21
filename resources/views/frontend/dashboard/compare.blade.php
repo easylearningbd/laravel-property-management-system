@@ -26,56 +26,10 @@
             <div class="auto-container">
                 <div class="table-outer">
                     <table class="properties-table">
-                        <thead class="table-header">
-                            <tr>
-                                <th>Property Info</th>
-                                <th>
-                                    <figure class="image-box"><img src="assets/images/resource/table-img-1.jpg" alt=""></figure>
-                                    <div class="title">Villa on Grand Avenue</div>
-                                    <div class="price">$45,000.00</div>
-                                </th>
-                                
-                               
-                            </tr>    
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <p>City</p>
-                                </td>
-                                <td>
-                                    <p>New York</p>
-                                </td>
-                                 
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Area</p>
-                                </td>
-                                <td>
-                                    <p>2410 Sq Ft</p>
-                                </td>
-                                 
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Rooms</p>
-                                </td>
-                                <td>
-                                    <p>5</p>
-                                </td>
-                                 
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Bathrooms</p>
-                                </td>
-                                <td>
-                                    <p>4</p>
-                                </td>
-                                 
-                            </tr>
-                           
+                       
+                        <tbody id="compare">
+
+
                             
                         </tbody>    
                     </table>
