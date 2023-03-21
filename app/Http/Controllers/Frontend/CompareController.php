@@ -36,6 +36,13 @@ class CompareController extends Controller
     } // End Method 
 
 
+    public function UserCompare(){ 
+
+        return view('frontend.dashboard.compare');
+
+    }// End Method 
+
+
 
 
 

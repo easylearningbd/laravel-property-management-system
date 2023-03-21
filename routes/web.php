@@ -63,6 +63,16 @@ Route::controller(WishlistController::class)->group(function(){
 });
 
 
+ // User Compare All Route 
+Route::controller(CompareController::class)->group(function(){
+
+     Route::get('/user/compare', 'UserCompare')->name('user.compare');
+    
+
+});
+
+
+
 
 });
 
