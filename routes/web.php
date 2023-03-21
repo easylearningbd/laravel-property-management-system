@@ -1,5 +1,5 @@
 <?php
-
+ 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -12,6 +12,7 @@ use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\WishlistController;
+use App\Http\Controllers\Frontend\CompareController;
    
 /*   
 |--------------------------------------------------------------------------
@@ -265,5 +266,8 @@ Route::controller(AgentPropertyController::class)->group(function(){
  Route::get('/property/details/{id}/{slug}', [IndexController::class, 'PropertyDetails']);
 
 // Wishlist Add Route 
-  Route::post('/add-to-wishList/{property_id}', [WishlistController::class, 'AddToWishList']);  
+  Route::post('/add-to-wishList/{property_id}', [WishlistController::class, 'AddToWishList']); 
+
+  // Compare Add Route 
+  Route::post('/add-to-compare/{property_id}', [CompareController::class, 'AddToCompare']);   
 
