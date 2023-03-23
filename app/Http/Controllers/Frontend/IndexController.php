@@ -31,5 +31,14 @@ class IndexController extends Controller
         return view('frontend.property.property_details',compact('property','multiImage','property_amen','facility','relatedProperty'));
 
     }// End Method 
+
+    public function PropertyMessage(Request $request){
+
+    }// End Method 
+
+
+
+
+
 }
  
