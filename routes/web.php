@@ -192,6 +192,8 @@ Route::controller(PropertyController::class)->group(function(){
 
        Route::get('/package/invoice/{id}', 'PackageInvoice')->name('package.invoice');
 
+       Route::get('/admin/property/message/', 'AdminPropertyMessage')->name('admin.property.message');
+
 });
 
 
