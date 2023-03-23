@@ -246,7 +246,9 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
       Route::get('/agent/details/property/{id}', 'AgentDetailsProperty')->name('agent.details.property'); 
 
-      Route::get('/agent/delete/property/{id}', 'AgentDeleteProperty')->name('agent.delete.property');  
+      Route::get('/agent/delete/property/{id}', 'AgentDeleteProperty')->name('agent.delete.property');
+
+      Route::get('/agent/property/message/', 'AgentPropertyMessage')->name('agent.property.message');  
 
 });
 
