@@ -525,5 +525,15 @@ public function AgentUpdatePropertyThambnail(Request $request){
 
     }// End Method  
 
+     public function AgentMessageDetails($id){
+
+        $id = Auth::user()->id;
+        $usermsg = PropertyMessage::where('agent_id',$id)->get();
+
+        $msgdetails = PropertyMessage::findOrFail($id);
+        return view('agent.message.message_details',compact('usermsg','msgdetails'));
+
+    }// End Method  
+
 
 } 

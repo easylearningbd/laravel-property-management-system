@@ -24,7 +24,7 @@
                     <div class="email-aside-nav collapse">
                       <ul class="nav flex-column">
                         <li class="nav-item active">
-                          <a class="nav-link d-flex align-items-center" href="../email/inbox.html">
+        <a class="nav-link d-flex align-items-center" href="{{ route('agent.property.message') }}">
                             <i data-feather="inbox" class="icon-lg me-2"></i>
                             Inbox
                             <span class="badge bg-danger fw-bolder ms-auto">{{ count($usermsg) }}
@@ -81,22 +81,53 @@
                       
                       
       <!-- email list item -->
-      @foreach($usermsg as $msg)
-      <div class="email-list-item">
-        
-        <a href="{{ route('agent.message.details',$msg->id) }}" class="email-list-detail">
-          <div class="content">
-            <span class="from">{{ $msg['user']['name'] }}</span>
-            <p class="msg"> {{ $msg->message }} </p>
-          </div>
-          <span class="date">
-            <span class="icon"><i data-feather="paperclip"></i> </span>
-           {{ $msg->created_at->format('l M d') }}
-          </span>
-        </a>
-      </div>
-    @endforeach
-                  
+      
+   <div class="table-responsive">
+                    <table class="table">
+                      
+                      <tbody>
+                        <tr>
+                          <th>Customer Name : </th>
+                          <td>{{ $msgdetails['user']['name'] }}</td>
+                      </tr>
+
+                       <tr>
+                          <th>Customer Email : </th>
+                          <td>{{ $msgdetails['user']['email'] }}</td>
+                      </tr>
+
+                       <tr>
+                          <th>Customer Phone  : </th>
+                          <td>{{ $msgdetails['user']['phone'] }}</td>
+                      </tr>
+
+                       <tr>
+                          <th>Property Name : </th>
+                          <td>{{ $msgdetails['property']['property_name'] }}</td>
+                      </tr>
+                       <tr>
+                          <th>Property Code : </th>
+                          <td>{{ $msgdetails['property']['property_code'] }}</td>
+                      </tr>
+
+                       <tr>
+                          <th>Property Status : </th>
+                          <td>{{ $msgdetails['property']['property_status'] }}</td>
+                      </tr>
+                       <tr>
+                          <th>Message  : </th>
+                          <td>{{ $msgdetails->message }}</td>
+                      </tr>
+
+                       <tr>
+                          <th>Sending Time  : </th>
+                          <td>{{ $msgdetails->created_at->format('l M d') }}</td>
+                      </tr>
+                       
+                       
+                      </tbody>
+                    </table>
+                </div>         
                     
 
                     </div>
