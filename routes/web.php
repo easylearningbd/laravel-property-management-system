@@ -301,3 +301,7 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
      // Get All Buy Property 
    Route::get('/buy/property', [IndexController::class, 'BuyProperty'])->name('buy.property');
+
+// Get All Property Type Data 
+ Route::get('/property/type/{id}', [IndexController::class, 'PropertyType'])->name('property.type');
+
