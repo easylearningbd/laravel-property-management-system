@@ -140,6 +140,15 @@ class IndexController extends Controller
     }// End Method 
 
 
+    public function BuyProperty(){
+
+        $property = Property::where('status','1')->where('property_status','buy')->get();
+
+        return view('frontend.property.buy_property',compact('property'));
+
+    }// End Method 
+
+
 
 }
  

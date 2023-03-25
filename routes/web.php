@@ -298,3 +298,6 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
    // Get All Rent Property 
    Route::get('/rent/property', [IndexController::class, 'RentProperty'])->name('rent.property');
+
+     // Get All Buy Property 
+   Route::get('/buy/property', [IndexController::class, 'BuyProperty'])->name('buy.property');
