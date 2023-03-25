@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\PropertyType;
 use App\Models\Amenities;
-
+ 
 class PropertyTypeController extends Controller
 {
     public function AllType(){

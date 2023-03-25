@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\PropertyController;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Controllers\Backend\StateController;
 
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Frontend\IndexController;
@@ -212,6 +213,18 @@ Route::controller(AdminController::class)->group(function(){
 
 });
 
+
+ // State  All Route 
+Route::controller(StateController::class)->group(function(){
+
+     Route::get('/all/state', 'AllState')->name('all.state'); 
+     Route::get('/add/type', 'AddType')->name('add.type');
+     Route::post('/store/type', 'StoreType')->name('store.type'); 
+     Route::get('/edit/type/{id}', 'EditType')->name('edit.type');
+     Route::post('/update/type', 'UpdateType')->name('update.type');
+     Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
+
+});
 
 
 }); // End Group Admin Middleware
