@@ -51,7 +51,7 @@
                   <a href="{{ route('all.state') }}" class="nav-link">All State</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/email/read.html" class="nav-link">Add State</a>
+                  <a href="{{ route('add.state') }}" class="nav-link">Add State</a>
                 </li>
                 
               </ul>

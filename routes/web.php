@@ -218,8 +218,8 @@ Route::controller(AdminController::class)->group(function(){
 Route::controller(StateController::class)->group(function(){
 
      Route::get('/all/state', 'AllState')->name('all.state'); 
-     Route::get('/add/type', 'AddType')->name('add.type');
-     Route::post('/store/type', 'StoreType')->name('store.type'); 
+     Route::get('/add/state', 'AddState')->name('add.state');
+     Route::post('/store/state', 'StoreState')->name('store.state'); 
      Route::get('/edit/type/{id}', 'EditType')->name('edit.type');
      Route::post('/update/type', 'UpdateType')->name('update.type');
      Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
