@@ -222,7 +222,7 @@ Route::controller(StateController::class)->group(function(){
      Route::post('/store/state', 'StoreState')->name('store.state'); 
      Route::get('/edit/state/{id}', 'EditState')->name('edit.state');
      Route::post('/update/state', 'UpdateState')->name('update.state');
-     Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
+     Route::get('/delete/state/{id}', 'DeleteState')->name('delete.state');  
 
 });
 
