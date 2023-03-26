@@ -16,6 +16,7 @@ use Carbon\Carbon;
 use App\Models\PackagePlan;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\PropertyMessage;
+use App\Models\State;
 
 class PropertyController extends Controller
 {
@@ -31,9 +32,10 @@ class PropertyController extends Controller
     public function AddProperty(){
 
         $propertytype = PropertyType::latest()->get();
+        $pstate = State::latest()->get();
         $amenities = Amenities::latest()->get();
         $activeAgent = User::where('status','active')->where('role','agent')->latest()->get();
-        return view('backend.property.add_property',compact('propertytype','amenities','activeAgent'));
+        return view('backend.property.add_property',compact('propertytype','amenities','activeAgent','pstate'));
 
     }// End Method 
 
@@ -146,11 +148,12 @@ class PropertyController extends Controller
 
         $multiImage = MultiImage::where('property_id',$id)->get();
 
+        $pstate = State::latest()->get();
         $propertytype = PropertyType::latest()->get();
         $amenities = Amenities::latest()->get();
         $activeAgent = User::where('status','active')->where('role','agent')->latest()->get();
 
-        return view('backend.property.edit_property',compact('property','propertytype','amenities','activeAgent','property_ami','multiImage','facilities'));
+        return view('backend.property.edit_property',compact('property','propertytype','amenities','activeAgent','property_ami','multiImage','facilities','pstate'));
 
     }// End Method 
 
