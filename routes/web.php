@@ -121,7 +121,7 @@ Route::post('/agent/update/password', [AgentController::class, 'AgentUpdatePassw
 }); // End Group Agent Middleware
 
 
-Route::get('/agent/login', [AgentController::class, 'AgentLogin'])->name('agent.login')->middleware(RedirectIfAuthenticated::class)->name('agent.login'); 
+Route::get('/agent/login', [AgentController::class, 'AgentLogin'])->name('agent.login')->middleware(RedirectIfAuthenticated::class); 
 
 Route::post('/agent/register', [AgentController::class, 'AgentRegister'])->name('agent.register'); 
 
