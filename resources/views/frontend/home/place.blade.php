@@ -32,7 +32,7 @@
             <div class="inner-box">
                 <figure class="image-box"><img src="{{ asset($skip_state_0->state_image) }}" alt="" style="width:370px; height:580px;"></figure>
                 <div class="text">
-                    <h4><a href="categories.html">{{ $skip_state_0->state_name }}</a></h4>
+                    <h4><a href="{{ route('state.details',$skip_state_0->id) }}">{{ $skip_state_0->state_name }}</a></h4>
                     <p>{{ count($property_0) }} Properties</p>
                 </div>
             </div>
@@ -46,7 +46,7 @@
             <div class="inner-box">
                 <figure class="image-box"><img src="{{ asset($skip_state_1->state_image) }}" alt="" style="width:370px; height:275px;"></figure>
                 <div class="text">
-                    <h4><a href="categories.html">{{ $skip_state_1->state_name }}</a></h4>
+                    <h4><a href="{{ route('state.details',$skip_state_1->id) }}">{{ $skip_state_1->state_name }}</a></h4>
                     <p>{{ count($property_1) }} Properties</p>
                 </div>
             </div>
@@ -59,7 +59,7 @@
             <div class="inner-box">
        <figure class="image-box"><img src="{{ asset($skip_state_2->state_image) }}" alt="" style="width:370px; height:275px;"></figure>
                 <div class="text">
-                    <h4><a href="categories.html">{{ $skip_state_2->state_name }}</a></h4>
+                    <h4><a href="{{ route('state.details',$skip_state_2->id) }}">{{ $skip_state_2->state_name }}</a></h4>
                     <p>{{ count($property_2) }} Properties</p>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             <div class="inner-box">
                 <figure class="image-box"><img src="{{ asset($skip_state_3->state_image) }}" alt="" style="width:770px; height:275px;"></figure>
                 <div class="text">
-                    <h4><a href="categories.html">{{ $skip_state_3->state_name }}</a></h4>
+                    <h4><a href="{{ route('state.details',$skip_state_3->id) }}">{{ $skip_state_3->state_name }}</a></h4>
                     <p>{{ count($property_3) }} Properties</p>
                 </div>
             </div>
