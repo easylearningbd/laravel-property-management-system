@@ -157,7 +157,7 @@ class PropertyController extends Controller
 
     }// End Method 
 
-
+ 
     public function UpdateProperty(Request $request){
 
         $amen = $request->amenities_id;

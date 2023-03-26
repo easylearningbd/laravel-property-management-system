@@ -62,7 +62,7 @@
                     <td><code>{{ $property['pstate']['state_name'] }}</code></td> 
                 </tr>
 
-                 <tr> 
+                 <tr>  
                     <td>Postal Code </td>
                     <td><code>{{ $property->postal_code }}</code></td> 
                 </tr>
