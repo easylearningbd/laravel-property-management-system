@@ -324,4 +324,7 @@ Route::controller(AgentPropertyController::class)->group(function(){
   // Home Page Buy Seach Option
    Route::post('/buy/property/search', [IndexController::class, 'BuyPropertySeach'])->name('buy.property.search');
 
+     // Home Page Rent Seach Option
+   Route::post('/rent/property/search', [IndexController::class, 'RentPropertySeach'])->name('rent.property.search');
+
 
