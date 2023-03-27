@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\PropertyController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Backend\StateController;
+use App\Http\Controllers\Backend\TestimonialController;
 
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Frontend\IndexController;
@@ -218,6 +219,19 @@ Route::controller(AdminController::class)->group(function(){
 Route::controller(StateController::class)->group(function(){
 
      Route::get('/all/state', 'AllState')->name('all.state'); 
+     Route::get('/add/state', 'AddState')->name('add.state');
+     Route::post('/store/state', 'StoreState')->name('store.state'); 
+     Route::get('/edit/state/{id}', 'EditState')->name('edit.state');
+     Route::post('/update/state', 'UpdateState')->name('update.state');
+     Route::get('/delete/state/{id}', 'DeleteState')->name('delete.state');  
+
+});
+
+
+ // Testimonials  All Route 
+Route::controller(TestimonialController::class)->group(function(){
+
+     Route::get('/all/testimonials', 'AllTestimonials')->name('all.testimonials'); 
      Route::get('/add/state', 'AddState')->name('add.state');
      Route::post('/store/state', 'StoreState')->name('store.state'); 
      Route::get('/edit/state/{id}', 'EditState')->name('edit.state');
