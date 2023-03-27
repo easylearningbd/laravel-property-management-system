@@ -170,6 +170,10 @@ class IndexController extends Controller
 
     }// End Method 
 
+    public function BuyPropertySeach(Request $request){
+
+    }// End Method 
+
 
 
 
