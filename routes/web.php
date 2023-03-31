@@ -248,8 +248,8 @@ Route::controller(BlogController::class)->group(function(){
      Route::get('/all/blog/category', 'AllBlogCategory')->name('all.blog.category');  
      Route::post('/store/blog/category', 'StoreBlogCategory')->name('store.blog.category'); 
      Route::get('/blog/category/{id}', 'EditBlogCategory');
-     Route::post('/update/type', 'UpdateType')->name('update.type');
-     Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
+     Route::post('/update/blog/category', 'UpdateBlogCategory')->name('update.blog.category');
+     Route::get('/delete/blog/category/{id}', 'DeleteBlogCategory')->name('delete.blog.category');  
 
 });
 

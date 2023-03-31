@@ -41,7 +41,7 @@
  Edit
 </button>
 
-       <a href="{{ route('delete.state',$item->id) }}" class="btn btn-inverse-danger" id="delete"> Delete  </a>
+       <a href="{{ route('delete.blog.category',$item->id) }}" class="btn btn-inverse-danger" id="delete"> Delete  </a>
                         </td> 
                       </tr>
                      @endforeach
@@ -100,14 +100,14 @@
       </div>
       <div class="modal-body">
 
-        <form method="POST" action="{{ route('store.blog.category') }}" class="forms-sample">
+        <form method="POST" action="{{ route('update.blog.category') }}" class="forms-sample">
         @csrf
  
     <input type="hidden" name="cat_id" id="cat_id">
 
         <div class="form-group mb-3">
  <label for="exampleInputEmail1" class="form-label">Blog Category Name </label>
-        <input type="text" name="category_name" class="form-control" id="cat" >
+  <input type="text" name="category_name" class="form-control" id="cat" >
            
         </div> 
      
