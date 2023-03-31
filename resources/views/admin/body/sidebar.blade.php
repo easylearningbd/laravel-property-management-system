@@ -190,7 +190,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a href="{{ route('all.blog.category') }}" class="nav-link">Add Post </a>
+                  <a href="{{ route('add.post') }}" class="nav-link">Add Post </a>
                 </li>
                 
                 

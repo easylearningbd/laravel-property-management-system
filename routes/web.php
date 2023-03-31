@@ -258,7 +258,7 @@ Route::controller(BlogController::class)->group(function(){
 Route::controller(BlogController::class)->group(function(){
 
      Route::get('/all/post', 'AllPost')->name('all.post'); 
-     Route::get('/add/testimonials', 'AddTestimonials')->name('add.testimonials');
+     Route::get('/add/post', 'AddPost')->name('add.post');
      Route::post('/store/testimonials', 'StoreTestimonials')->name('store.testimonials'); 
      Route::get('/edit/testimonials/{id}', 'EditTestimonials')->name('edit.testimonials');
      Route::post('/update/testimonials', 'UpdateTestimonials')->name('update.testimonials');
