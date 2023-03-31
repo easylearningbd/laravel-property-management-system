@@ -177,6 +177,28 @@
           </li>
 
 
+           <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#Post" role="button" aria-expanded="false" aria-controls="uiComponents">
+              <i class="link-icon" data-feather="feather"></i>
+              <span class="link-title">Blog Post </span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="Post">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="{{ route('all.post') }}" class="nav-link">All Post </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="{{ route('all.blog.category') }}" class="nav-link">Add Post </a>
+                </li>
+                
+                
+              </ul>
+            </div>
+          </li>
+
+
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button" aria-expanded="false" aria-controls="advancedUI">
               <i class="link-icon" data-feather="anchor"></i>

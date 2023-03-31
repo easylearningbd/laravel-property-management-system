@@ -254,6 +254,19 @@ Route::controller(BlogController::class)->group(function(){
 });
 
 
+ // Testimonials  All Route 
+Route::controller(BlogController::class)->group(function(){
+
+     Route::get('/all/post', 'AllPost')->name('all.post'); 
+     Route::get('/add/testimonials', 'AddTestimonials')->name('add.testimonials');
+     Route::post('/store/testimonials', 'StoreTestimonials')->name('store.testimonials'); 
+     Route::get('/edit/testimonials/{id}', 'EditTestimonials')->name('edit.testimonials');
+     Route::post('/update/testimonials', 'UpdateTestimonials')->name('update.testimonials');
+     Route::get('/delete/testimonials/{id}', 'DeleteTestimonials')->name('delete.testimonials');  
+
+});
+
+
 }); // End Group Admin Middleware
 
 
