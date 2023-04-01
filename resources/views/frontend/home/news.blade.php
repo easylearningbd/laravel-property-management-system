@@ -17,11 +17,11 @@
     <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
         <div class="inner-box">
             <div class="image-box">
-                <figure class="image"><a href="blog-details.html"><img src="{{ asset($item->post_image) }}" alt=""></a></figure>
+                <figure class="image"><a href="{{ url('blog/details/'.$item->post_slug) }}"><img src="{{ asset($item->post_image) }}" alt=""></a></figure>
                 <span class="category">New</span>
             </div>
             <div class="lower-content">
-                <h4><a href="blog-details.html">{{ $item->post_title }}</a></h4>
+                <h4><a href="{{ url('blog/details/'.$item->post_slug) }}">{{ $item->post_title }}</a></h4>
                 <ul class="post-info clearfix">
                     <li class="author-box">
                         <figure class="author-thumb"><img src="{{ (!empty($item->user->photo)) ? url('upload/admin_images/'.$item->user->photo) : url('upload/no_image.jpg') }}" alt=""></figure>
@@ -33,7 +33,7 @@
                     <p> {{ $item->short_descp }}</p>
                 </div>
                 <div class="btn-box">
-                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>
+                    <a href="{{ url('blog/details/'.$item->post_slug) }}" class="theme-btn btn-two">See Details</a>
                 </div>
             </div>
         </div>

@@ -371,3 +371,6 @@ Route::controller(AgentPropertyController::class)->group(function(){
    Route::post('/all/property/search', [IndexController::class, 'AllPropertySeach'])->name('all.property.search');
 
 
+ // Blog Details Route 
+ Route::get('/blog/details/{slug}', [BlogController::class, 'BlogDetails']);
+
