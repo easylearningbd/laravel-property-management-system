@@ -233,6 +233,17 @@ class BlogController extends Controller
 
     }// End Method
 
+    public function BlogList(){
+
+        $blog = BlogPost::latest()->get(); 
+        $bcategory = BlogCategory::latest()->get();
+        $dpost = BlogPost::latest()->limit(3)->get();
+
+        return view('frontend.blog.blog_list', compact('blog','bcategory','dpost'));
+
+
+    }// End Method
+
 
 }
  
