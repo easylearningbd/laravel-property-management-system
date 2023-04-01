@@ -373,4 +373,5 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
  // Blog Details Route 
  Route::get('/blog/details/{slug}', [BlogController::class, 'BlogDetails']);
+ Route::get('/blog/cat/list/{id}', [BlogController::class, 'BlogCatList']);
 

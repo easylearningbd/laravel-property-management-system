@@ -177,7 +177,7 @@
            @endphp
 
 
-  <li><a href="blog-details.html">{{ $cat->category_name }}<span>({{ count($post) }})</span></a></li>
+  <li><a href="{{ url('blog/cat/list/'.$cat->id) }}">{{ $cat->category_name }}<span>({{ count($post) }})</span></a></li>
             @endforeach
         </ul>
     </div>
