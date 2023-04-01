@@ -48,9 +48,9 @@
         <div class="post-tags">
             <ul class="tags-list clearfix">
                 <li><h5>Tags:</h5></li>
-                <li><a href="blog-details.html">Real Estate</a></li>
-                <li><a href="blog-details.html">Interior</a></li>
-                <li><a href="blog-details.html">Rent Home</a></li>
+                @foreach($tags_all as $tag)
+                <li><a href="">{{ ucwords($tag) }}</a></li>
+                @endforeach
             </ul>
         </div>
     </div>
@@ -170,11 +170,15 @@
     </div>
     <div class="widget-content">
         <ul class="category-list clearfix">
-            <li><a href="blog-details.html">Home improvement<span>(9)</span></a></li>
-            <li><a href="blog-details.html">Architecture<span>(5)</span></a></li>
-            <li><a href="blog-details.html">Tips and advice<span>(2)</span></a></li>
-            <li><a href="blog-details.html">Interior<span>(7)</span></a></li>
-            <li><a href="blog-details.html">Real Estate<span>(3)</span></a></li>
+           @foreach($bcategory as $cat)
+
+           @php
+        $post = App\Models\BlogPost::where('blogcat_id',$cat->id)->get();
+           @endphp
+
+
+  <li><a href="blog-details.html">{{ $cat->category_name }}<span>({{ count($post) }})</span></a></li>
+            @endforeach
         </ul>
     </div>
 </div>
@@ -183,53 +187,20 @@
         <h4>Recent Posts</h4>
     </div>
     <div class="post-inner">
+        
+    	@foreach($dpost as $post)
         <div class="post">
-            <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-1.jpg" alt=""></a></figure>
-            <h5><a href="blog-details.html">Best interior design idea for your home.</a></h5>
-            <span class="post-date">April 10, 2020</span>
+            <figure class="post-thumb"><a href="blog-details.html"><img src="{{ asset($post->post_image) }}" alt=""></a></figure>
+            <h5><a href="blog-details.html">{{ $post->post_title }}</a></h5>
+            <span class="post-date">{{ $post->created_at->format('M d Y') }}</span>
         </div>
-        <div class="post">
-            <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-2.jpg" alt=""></a></figure>
-            <h5><a href="blog-details.html">A digital prescription for the industry.</a></h5>
-            <span class="post-date">April 09, 2020</span>
-        </div>
-        <div class="post">
-            <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-3.jpg" alt=""></a></figure>
-            <h5><a href="blog-details.html">Strategic & commercial approach with issues.</a></h5>
-            <span class="post-date">April 08, 2020</span>
-        </div>
+      	@endforeach
+
+
     </div>
 </div>
-<div class="sidebar-widget category-widget">
-    <div class="widget-title">
-        <h4>Archives</h4>
-    </div>
-    <div class="widget-content">
-        <ul class="category-list clearfix">
-            <li><a href="blog-details.html">November 2016<span>(9)</span></a></li>
-            <li><a href="blog-details.html">November 2017<span>(5)</span></a></li>
-            <li><a href="blog-details.html">November 2018<span>(2)</span></a></li>
-            <li><a href="blog-details.html">November 2019<span>(7)</span></a></li>
-            <li><a href="blog-details.html">November 2020<span>(3)</span></a></li>
-        </ul>
-    </div>
-</div>
-<div class="sidebar-widget tags-widget">
-    <div class="widget-title">
-        <h4>Popular Tags</h4>
-    </div>
-    <div class="widget-content">
-        <ul class="tags-list clearfix">
-            <li><a href="blog-details.html">Real Estate</a></li>
-            <li><a href="blog-details.html">HouseHunting</a></li>
-            <li><a href="blog-details.html">Architecture</a></li>
-            <li><a href="blog-details.html">Interior</a></li>
-            <li><a href="blog-details.html">Sale</a></li>
-            <li><a href="blog-details.html">Rent Home</a></li>
-            <li><a href="blog-details.html">Listing</a></li>
-        </ul>
-    </div>
-                            </div>
+ 
+ 
                         </div>
                     </div>
                 </div>
