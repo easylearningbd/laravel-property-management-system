@@ -112,18 +112,11 @@
     <div class="group-title">
         <h4>Leave a Comment</h4>
     </div>
+    @auth
     <form action="blog-details.html" method="post" class="comment-form default-form">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                <input type="text" name="name" placeholder="Your name" required="">
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                <input type="email" name="email" placeholder="Your email" required>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                <input type="text" name="phone" placeholder="Phone number" required="">
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                 <input type="text" name="subject" placeholder="Subject" required="">
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
@@ -134,6 +127,11 @@
             </div>
         </div>
     </form>
+
+    @else 
+    <p><b>For Add Comment You need to login first <a href="{{ route('login')}}"> Login Here </a> </b></p>
+    @endauth
+
 </div>
 </div>
 </div>
