@@ -379,3 +379,7 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
  Route::get('/admin/blog/comment', [BlogController::class, 'AdminBlogComment'])->name('admin.blog.comment');
 
+  Route::get('/admin/comment/reply/{id}', [BlogController::class, 'AdminCommentReply'])->name('admin.comment.reply');
+
+  Route::post('/reply/message', [BlogController::class, 'ReplyMessage'])->name('reply.message');
+
