@@ -377,3 +377,5 @@ Route::controller(AgentPropertyController::class)->group(function(){
  Route::get('/blog', [BlogController::class, 'BlogList'])->name('blog.list');
   Route::post('/store/comment', [BlogController::class, 'StoreComment'])->name('store.comment');
 
+ Route::get('/admin/blog/comment', [BlogController::class, 'AdminBlogComment'])->name('admin.blog.comment');
+

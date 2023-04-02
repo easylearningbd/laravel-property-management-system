@@ -270,5 +270,13 @@ class BlogController extends Controller
     }// End Method
 
 
+    public function AdminBlogComment(){
+
+        $comment = Comment::where('parent_id',null)->latest()->get();
+        return view('backend.comment.comment_all',compact('comment'));
+
+    }// End Method
+
+
 }
  
