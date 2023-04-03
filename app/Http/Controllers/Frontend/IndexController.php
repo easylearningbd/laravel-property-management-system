@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\PropertyMessage;  
 use Carbon\Carbon;
 use App\Models\State; 
+use App\Models\Schedule; 
 
 class IndexController extends Controller
 {
@@ -232,6 +233,11 @@ class IndexController extends Controller
         ->get();
 
         return view('frontend.property.property_search',compact('property'));
+
+    }// End Method 
+
+
+    public function StoreSchedule(Request $request){
 
     }// End Method 
 

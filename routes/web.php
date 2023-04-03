@@ -383,3 +383,7 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
   Route::post('/reply/message', [BlogController::class, 'ReplyMessage'])->name('reply.message');
 
+
+  // Schedule Message Request Route 
+   Route::post('/store/schedule', [IndexController::class, 'StoreSchedule'])->name('store.schedule');
+
