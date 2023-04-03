@@ -19,6 +19,7 @@
  	@csrf
 
   <input type="hidden" name="id" value="{{ $schedule->id }}">
+  <input type="hidden" name="email" value="{{ $schedule->user->email }}">
 
   <div class="table-responsive pt-3">
                   <table class="table table-bordered">
