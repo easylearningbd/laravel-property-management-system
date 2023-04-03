@@ -546,7 +546,15 @@ public function AgentUpdatePropertyThambnail(Request $request){
         $usermsg = Schedule::where('agent_id',$id)->get();
         return view('agent.schedule.schedule_request',compact('usermsg'));
 
-    }// End Method  
+    }// End Method 
+
+
+    public function AgentDetailsSchedule($id){
+
+        $schedule = Schedule::findOrFail($id);
+        return view('agent.schedule.schedule_details',compact('schedule'));
+
+    } // End Method 
 
 
 } 
