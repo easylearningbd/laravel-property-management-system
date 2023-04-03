@@ -305,7 +305,10 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
       Route::get('/agent/property/message/', 'AgentPropertyMessage')->name('agent.property.message');
 
-      Route::get('/agent/message/details/{id}', 'AgentMessageDetails')->name('agent.message.details');   
+      Route::get('/agent/message/details/{id}', 'AgentMessageDetails')->name('agent.message.details');  
+
+   // Schedule Request Route 
+    Route::get('/agent/schedule/request/', 'AgentScheduleRequest')->name('agent.schedule.request'); 
 
 });
 

@@ -19,7 +19,8 @@ use App\Models\PackagePlan;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\PropertyMessage;
 use App\Models\State;
-  
+use App\Models\Schedule;
+   
 class AgentPropertyController extends Controller
 {
     public function AgentAllProperty(){
@@ -535,6 +536,15 @@ public function AgentUpdatePropertyThambnail(Request $request){
 
         $msgdetails = PropertyMessage::findOrFail($id);
         return view('agent.message.message_details',compact('usermsg','msgdetails'));
+
+    }// End Method  
+
+
+    public function AgentScheduleRequest(){
+
+        $id = Auth::user()->id;
+        $usermsg = Schedule::where('agent_id',$id)->get();
+        return view('agent.schedule.schedule_request',compact('usermsg'));
 
     }// End Method  
 
