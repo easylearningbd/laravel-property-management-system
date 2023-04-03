@@ -557,4 +557,24 @@ public function AgentUpdatePropertyThambnail(Request $request){
     } // End Method 
 
 
+    public function AgentUpdateSchedule(Request $request){
+
+        $sid = $request->id;
+
+        Schedule::findOrFail($sid)->update([
+            'status' => '1',
+
+        ]);
+
+         $notification = array(
+            'message' => 'You have Confirm Schedule Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('agent.schedule.request')->with($notification);
+
+
+    }// End Method 
+
+
 } 

@@ -312,6 +312,8 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
      Route::get('/agent/details/schedule/{id}', 'AgentDetailsSchedule')->name('agent.details.schedule'); 
 
+   Route::post('/agent/update/schedule/', 'AgentUpdateSchedule')->name('agent.update.schedule'); 
+
 });
 
 
