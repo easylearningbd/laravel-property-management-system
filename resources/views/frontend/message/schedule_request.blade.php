@@ -77,7 +77,35 @@
                                         
                                          
                                       
- asdfsadfsdafsadf
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Property Name </th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($srequest as $key => $item)
+    <tr>
+      <th scope="row">{{ $key+1 }}</th>
+      <td>{{ $item['property']['property_name'] }}</td>
+      <td>{{ $item->tour_date }}</td>
+      <td>{{ $item->tour_time }}</td>
+      <td>
+          @if($item->status == 1)
+          <span class="badge rounded-pill bg-success">Confirm</span>
+
+          @else
+       <span class="badge rounded-pill bg-danger">Pending</span>
+          @endif
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
 
 
  
