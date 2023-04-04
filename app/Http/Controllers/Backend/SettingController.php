@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\SmtpSetting;
-
+use App\Models\SiteSetting;
+ 
 class SettingController extends Controller
 {
     public function SmtpSetting(){
@@ -41,6 +42,14 @@ class SettingController extends Controller
         return redirect()->back()->with($notification);
 
 
+
+    }// End Method 
+
+
+    public function SiteSetting(){
+
+         $sitesetting = SiteSetting::find(1);
+        return view('backend.setting.site_update',compact('sitesetting'));
 
     }// End Method 
 

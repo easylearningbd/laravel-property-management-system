@@ -275,8 +275,15 @@ Route::controller(BlogController::class)->group(function(){
 Route::controller(SettingController::class)->group(function(){
 
      Route::get('/smtp/setting', 'SmtpSetting')->name('smtp.setting');
-     Route::post('/update/smpt/setting', 'UpdateSmtpSetting')->name('update.smpt.setting'); 
-    
+     Route::post('/update/smpt/setting', 'UpdateSmtpSetting')->name('update.smpt.setting');  
+
+});
+
+ // Site Setting  All Route 
+Route::controller(SettingController::class)->group(function(){
+
+     Route::get('/site/setting', 'SiteSetting')->name('site.setting');
+     Route::post('/update/smpt/setting', 'UpdateSmtpSetting')->name('update.smpt.setting');  
 
 });
 
