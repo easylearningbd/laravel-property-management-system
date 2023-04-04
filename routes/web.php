@@ -11,6 +11,7 @@ use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\SettingController;
  
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Frontend\IndexController;
@@ -265,6 +266,16 @@ Route::controller(BlogController::class)->group(function(){
      Route::get('/delete/post/{id}', 'DeletePost')->name('delete.post');  
 
 });
+
+
+ // SMTP Setting  All Route 
+Route::controller(SettingController::class)->group(function(){
+
+     Route::get('/smtp/setting', 'SmtpSetting')->name('smtp.setting'); 
+    
+
+});
+
 
 
 }); // End Group Admin Middleware
