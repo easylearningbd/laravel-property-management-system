@@ -55,6 +55,9 @@ Route::middleware('auth')->group(function () {
   Route::post('/user/password/update', [UserController::class, 'UserPasswordUpdate'])->name('user.password.update');
 
 
+  Route::get('/user/schedule/request', [UserController::class, 'UserScheduleRequest'])->name('user.schedule.request'); 
+
+
 
  // User WishlistAll Route 
 Route::controller(WishlistController::class)->group(function(){
