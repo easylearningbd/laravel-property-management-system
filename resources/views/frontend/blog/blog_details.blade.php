@@ -1,5 +1,8 @@
 @extends('frontend.frontend_dashboard')
 @section('main')
+@section('title')
+  {{ $blog->post_title }} | Easy RealEstate  
+@endsection
 
 
         <!--Page Title-->
