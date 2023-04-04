@@ -17,8 +17,9 @@
 
 			<h6 class="card-title">Update Site Setting   </h6>
 
-  <form id="myForm" method="POST" action="{{ route('update.smpt.setting') }}" class="forms-sample">
+  <form id="myForm" method="POST" action="{{ route('update.site.setting') }}" class="forms-sample" enctype="multipart/form-data">
 				@csrf
+                
   <input type="hidden" name="id" value="{{ $sitesetting->id }}">
 
 				<div class="form-group mb-3">

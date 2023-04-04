@@ -283,7 +283,7 @@ Route::controller(SettingController::class)->group(function(){
 Route::controller(SettingController::class)->group(function(){
 
      Route::get('/site/setting', 'SiteSetting')->name('site.setting');
-     Route::post('/update/smpt/setting', 'UpdateSmtpSetting')->name('update.smpt.setting');  
+     Route::post('/update/site/setting', 'UpdateSiteSetting')->name('update.site.setting');  
 
 });
 
