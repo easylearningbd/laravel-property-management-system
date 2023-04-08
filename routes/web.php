@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\StateController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\SettingController;
+use App\Http\Controllers\Backend\RoleController;
  
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Frontend\IndexController;
@@ -287,6 +288,18 @@ Route::controller(SettingController::class)->group(function(){
 
 });
 
+
+ // Permission All Route 
+Route::controller(RoleController::class)->group(function(){
+
+     Route::get('/all/permission', 'AllPermission')->name('all.permission'); 
+     Route::get('/add/type', 'AddType')->name('add.type');
+     Route::post('/store/type', 'StoreType')->name('store.type'); 
+     Route::get('/edit/type/{id}', 'EditType')->name('edit.type');
+     Route::post('/update/type', 'UpdateType')->name('update.type');
+     Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
+
+});
 
 
 }); // End Group Admin Middleware
