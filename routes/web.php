@@ -17,7 +17,7 @@ use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\WishlistController;
 use App\Http\Controllers\Frontend\CompareController;
-    
+     
 /*   
 |--------------------------------------------------------------------------
 | Web Routes
