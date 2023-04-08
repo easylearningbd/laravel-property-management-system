@@ -295,9 +295,9 @@ Route::controller(RoleController::class)->group(function(){
      Route::get('/all/permission', 'AllPermission')->name('all.permission'); 
      Route::get('/add/permission', 'AddPermission')->name('add.permission');
      Route::post('/store/permission', 'StorePermission')->name('store.permission'); 
-     Route::get('/edit/type/{id}', 'EditType')->name('edit.type');
-     Route::post('/update/type', 'UpdateType')->name('update.type');
-     Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
+     Route::get('/edit/permission/{id}', 'EditPermission')->name('edit.permission');
+     Route::post('/update/permission', 'UpdatePermission')->name('update.permission');
+     Route::get('/delete/permission/{id}', 'DeletePermission')->name('delete.permission');  
 
 });
 
