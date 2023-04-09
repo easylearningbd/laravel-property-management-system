@@ -60,14 +60,21 @@
 
          <div class="col-9">
 
+  @php
+  $permissions = App\Models\User::getpermissionByGroupName($group->group_name)
+  @endphp
 
+      @foreach($permissions as $permission)
           <div class="form-check mb-2">
-                  <input type="checkbox" class="form-check-input" id="checkDefault">
-                  <label class="form-check-label" for="checkDefault">
-                   Permission All 
+     
+      <input type="checkbox" class="form-check-input" name="permission[]" id="checkDefault{{ $permission->id }}" value="{{ $permission->id }}">
+     
+    <label class="form-check-label" for="checkDefault{{ $permission->id }}">
+                   {{ $permission->name }}
                   </label>
                 </div>
-          
+          @endforeach
+          <br>
         </div>
         
       </div> <!-- // End Row  -->
