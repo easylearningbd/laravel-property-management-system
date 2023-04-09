@@ -307,6 +307,19 @@ Route::controller(RoleController::class)->group(function(){
 });
 
 
+// Roles All Route 
+Route::controller(RoleController::class)->group(function(){
+
+     Route::get('/all/roles', 'AllRoles')->name('all.roles'); 
+     Route::get('/add/roles', 'AddRoles')->name('add.roles');
+     Route::post('/store/roles', 'StoreRoles')->name('store.roles'); 
+     Route::get('/edit/permission/{id}', 'EditPermission')->name('edit.permission');
+     Route::post('/update/permission', 'UpdatePermission')->name('update.permission');
+     Route::get('/delete/permission/{id}', 'DeletePermission')->name('delete.permission');   
+ 
+});
+
+
 }); // End Group Admin Middleware
 
 
