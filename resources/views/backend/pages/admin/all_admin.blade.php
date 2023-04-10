@@ -9,7 +9,7 @@
 
 				<nav class="page-breadcrumb">
 					<ol class="breadcrumb">
-	  <a href="{{ route('add.agent') }}" class="btn btn-inverse-info"> Add Admin    </a>
+	  <a href="{{ route('add.admin') }}" class="btn btn-inverse-info"> Add Admin    </a>
 					</ol>
 				</nav>
 
@@ -40,7 +40,11 @@
                         <td>{{ $item->name }}</td> 
                        <td>{{ $item->email }}</td> 
                        <td>{{ $item->phone }}</td> 
-                       <td>Role </td>   
+                       <td>
+                      @foreach($item->roles as $role)
+            <span class="badge badge-pill bg-danger">{{ $role->name }}</span>
+                      @endforeach
+                       </td>   
                         <td> 
        <a href="{{ route('edit.agent',$item->id) }}" class="btn btn-inverse-warning" title="Edit"> <i data-feather="edit"></i> </a>
 

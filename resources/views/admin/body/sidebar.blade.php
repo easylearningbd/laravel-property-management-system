@@ -261,7 +261,7 @@
                   <a href="{{ route('all.admin') }}" class="nav-link">All Admin</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('all.roles') }}" class="nav-link">Add Admin </a>
+                  <a href="{{ route('add.admin') }}" class="nav-link">Add Admin </a>
                 </li> 
               </ul>
             </div>
