@@ -302,6 +302,23 @@ public function AdminLogout(Request $request){
   }// End Method 
 
 
+  public function DeleteAdmin($id){
+
+    $user = User::findOrFail($id);
+    if (!is_null($user)) {
+        $user->delete();
+    }
+
+    $notification = array(
+            'message' => 'New Admin User Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
+
+  }// End Method 
+
+
 
 }
  
