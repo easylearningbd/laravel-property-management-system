@@ -220,6 +220,16 @@ public function AdminLogout(Request $request){
   }// End Method 
 
 
+       /////////// Admin User All Method ////////////
+ 
+  public function AllAdmin(){
+
+    $alladmin = User::where('role','admin')->get();
+    return view('backend.pages.admin.all_admin',compact('alladmin'));
+
+  }// End Method 
+
+
 
 }
  
