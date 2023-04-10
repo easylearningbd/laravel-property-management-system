@@ -44,7 +44,7 @@
 
                         <td>
        <a href="{{ route('admin.edit.roles',$item->id) }}" class="btn btn-inverse-warning"> Edit </a>
-       <a href="{{ route('delete.roles',$item->id) }}" class="btn btn-inverse-danger" id="delete"> Delete  </a>
+       <a href="{{ route('admin.delete.roles',$item->id) }}" class="btn btn-inverse-danger" id="delete"> Delete  </a>
                         </td> 
                       </tr>
                      @endforeach
