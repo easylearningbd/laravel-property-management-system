@@ -268,12 +268,15 @@
                     </ul>
                
 
-
+   @auth
   <div id="app">
 
     <send-message></send-message>
       
   </div>
+  @else
+  <span class="text-danger">For Chat Login First </span>
+  @endauth
 
 
 
