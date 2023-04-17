@@ -271,7 +271,9 @@
    @auth
   <div id="app">
 
-    <send-message></send-message>
+    <send-message :recevierid="{{ $property->agent_id }}" receivername="{{ $property->user->name }}" >
+
+    </send-message>
       
   </div>
   @else
