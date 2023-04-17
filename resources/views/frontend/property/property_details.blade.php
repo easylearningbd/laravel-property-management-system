@@ -266,7 +266,20 @@
                         <li><i class="fas fa-map-marker-alt"></i>{{ $property->user->address }}</li>
                         <li><i class="fas fa-phone"></i><a href="tel:03030571965">{{ $property->user->phone }}</a></li>
                     </ul>
-                    <div class="btn-box"><a href="agents-details.html">View Listing</a></div>
+               
+
+
+  <div id="app">
+
+    <send-message></send-message>
+      
+  </div>
+
+
+
+
+
+
                 </div>
 
              @endif 
