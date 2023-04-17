@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\RoleController;
+use App\Http\Controllers\Backend\ChatController;
  
 use App\Http\Controllers\Agent\AgentPropertyController;
 use App\Http\Controllers\Frontend\IndexController;
@@ -471,4 +472,7 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
   // Schedule Message Request Route 
    Route::post('/store/schedule', [IndexController::class, 'StoreSchedule'])->name('store.schedule');
+
+     // Chat Post Request Route 
+   Route::post('/send-message', [ChatController::class, 'SendMsg'])->name('send.msg');
 

@@ -19,7 +19,8 @@
       <div class="modal-body">
        <div class="form-group">
        	<textarea class="form-control" v-model="form.msg" id="" rows="3" placeholder="Type Your Message"></textarea>
-       	
+       	<span class="text-success" v-if="succMessage.message" >{{ succMessage.message }}</span>
+       	<span class="text-danger" v-if="errors.msg" >{{ errors.msg[0] }}</span>
        </div>  
 
       </div>
@@ -50,14 +51,24 @@ export default {
 	data(){
 		return{
 			form: {
-				msg:""
-			}
+				msg:"",
+				receiver_id: this.recevierid,
+			},
+			errors:{},
+			succMessage:{},
 		}
 	},
-	
+
 	methods: {
 		sendMsg(){
-			alert(this.form.msg)
+			axios.post('/send-message',this.form)
+			.then((res) => {
+				this.form.msg = "";
+				this.succMessage = res.data;
+				console.log(res.data);
+			}).catch((err) => {
+				this.errors = err.response.data.errors;
+			})
 		}
 	} 
 
