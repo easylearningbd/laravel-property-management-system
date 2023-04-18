@@ -4,13 +4,21 @@
         <ul class="user">
            <strong>Chat List</strong>
            <hr>
-        <li> 
+        <li v-for="(user, index) in users" :key="index" >  
           <a href="">
-            <img src="/frontend/avatar-1.png"
+            
+            <img v-if="user.role === 'user' " :src="'/upload/user_images/'+user.photo"
               alt="UserImage"
               class="userImg"
             />
-            <span class="username text-center">{{ users }}</span>
+
+             <img v-else :src="'/upload/agent_images/'+user.photo"
+              alt="UserImage"
+              class="userImg"
+            />
+
+
+            <span class="username text-center">{{ user.name }}</span>
           </a>
         </li>
  
