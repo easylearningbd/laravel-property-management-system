@@ -479,3 +479,7 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
    Route::get('/user-all', [ChatController::class, 'GetAllUsers']);
 
+   Route::get('/user-message/{id}', [ChatController::class, 'UserMsgById']);
+
+
+
