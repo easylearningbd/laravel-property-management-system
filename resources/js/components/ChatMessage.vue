@@ -43,7 +43,7 @@
                 <div class="header clearfix">
                   <strong class="primary-font">{{ msg.user.name }}</strong>
                   <small class="right text-muted">
-                   {{ msg.created_at }}
+                  {{ dateTime(msg.created_at) }}
                   </small>
                   <!-- //if send with product id  --> 
                 </div>
@@ -63,7 +63,7 @@
               <div class="chat-body clearfix">
                 <div class="header clearfix">
                   <small class="left text-muted"
-                    >{{ msg.created_at }}</small>
+                    >{{ dateTime(msg.created_at) }}</small>
                <strong class="right primary-font">{{ msg.user.name }} </strong> 
                 </div>
                 <p>{{ msg.msg }}</p>
@@ -96,6 +96,7 @@
 </template>
 
 <script>
+import moment from 'moment';
 export default {
 	data(){
 		return {
@@ -103,6 +104,7 @@ export default {
 			allmessages: {},
 			selectedUser: '',
 			msg:'',
+			moment: moment,
 
 		}
 	},
@@ -142,6 +144,9 @@ export default {
 				this.errors = err.response.data.errors;
 			})
 		},
+		dateTime(value){
+			return moment().format("MMM Do YY");
+		}
  
 	},
    
