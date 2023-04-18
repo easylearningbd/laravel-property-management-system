@@ -481,5 +481,5 @@ Route::controller(AgentPropertyController::class)->group(function(){
 
    Route::get('/user-message/{id}', [ChatController::class, 'UserMsgById']);
 
-
+ Route::get('/agent/live/chat', [ChatController::class, 'AgentLiveChat'])->name('agent.live.chat');
 

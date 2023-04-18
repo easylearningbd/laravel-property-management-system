@@ -72,6 +72,13 @@ class ChatController extends Controller
     }// End Method
 
 
+    public function AgentLiveChat(){
+
+        return view('agent.message.live_chat');
+
+    }// End Method
+
+
 
 }
  
