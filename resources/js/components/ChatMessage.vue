@@ -102,9 +102,35 @@
 
 <script>
 export default {
+	data(){
+		return {
+			users: {},
+
+		}
+	},
+
+	created(){
+
+	},
+
+	methods:{
+
+		getAllUser(){
+			axios.get('/user-all')
+			.then((res) => {
+				this.users = res.data;
+			}).catch((err) => {
+
+			})
+		} 
+	},
    
 };
 </script>
+
+
+
+
 <style> 
 
 .username {
@@ -206,9 +232,6 @@ export default {
 .chat-msg .right {
   float: right;
 }
-
-.clearfix {
-  clear: both;
-}
+ 
 </style>
 

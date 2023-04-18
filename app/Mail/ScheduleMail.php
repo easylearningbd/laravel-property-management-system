@@ -20,7 +20,7 @@ class ScheduleMail extends Mailable
     {
         //
     }
-
+ 
     /**
      * Get the message envelope.
      */

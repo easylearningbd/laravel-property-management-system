@@ -477,3 +477,5 @@ Route::controller(AgentPropertyController::class)->group(function(){
      // Chat Post Request Route 
    Route::post('/send-message', [ChatController::class, 'SendMsg'])->name('send.msg');
 
+   Route::get('/user-all', [ChatController::class, 'GetAllUsers']);
+

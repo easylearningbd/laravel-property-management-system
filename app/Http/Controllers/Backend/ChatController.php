@@ -28,6 +28,18 @@ class ChatController extends Controller
     }// End Method 
 
 
+    public function GetAllUsers(){
+
+        $chats = ChatMessage::orderBy('id','DESC')
+                ->where('sender_id',auth()->id())
+                ->orWhere('receiver_id',auth()->id())
+                ->get();
+
+        return $chats;
+
+    }// End Method 
+
+
 
 
 
