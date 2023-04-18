@@ -62,8 +62,8 @@ class ChatController extends Controller
                  })->with('user')->get();
 
                  return response()->json([
-                    'user' = $user,
-                    'messages' = $messages,
+                    'user' => $user,
+                    'messages' => $messages,
                  ]);
         }else{
             abort(404);
